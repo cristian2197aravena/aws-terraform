@@ -1,14 +1,3 @@
-terraform {
-  backend "s3" {
-    bucket = "tf-state-cris-arav-labfinal2197"
-    key = "servidor/terraform.tfstate"
-    region = "eu-west-1"
-
-    dynamodb_table = "tf-state-db5"
-    encrypt = true
-  }
-}
-
 //Define el privder de AWS
 provider "aws" {
   region = local.region
